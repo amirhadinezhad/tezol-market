@@ -1,0 +1,242 @@
+@font-face{
+    font-family: 'iransans';
+    font-style: normal;
+    src: url('fonts/Iranian\ Sans.ttf') format('truetype');
+}
+*{
+    font-family: iransans;
+}
+
+html{
+    direction: rtl;
+}
+html , body , h1 , h2 , header ,p , h3 , h4  , ul , li , a{
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+header{
+    height: 150px;
+}
+header .top{
+    height: 35px;
+    background: #FF1744;
+}
+header .top .container , .main .container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+}
+header .top .container a{
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+}
+header .top .container ul , header .top .container ul li{
+    height: 100%;
+}
+header .top .container img{
+    height: 100%;
+}
+header .top .info{
+    width: 15%;
+}
+header .top .empty{
+    width: 70%;
+}
+header .top .left-content{
+    width: 35%;
+}
+header .top .left-content ul li a img , header .top .info  a img{
+    vertical-align: middle;
+    width: 30px;
+}
+header .top .left-content ul li:last-child{
+    margin-right: 10px;
+}
+header .top .left-content ul li a {
+    margin-top: 3px;
+    white-space: nowrap;
+}
+header .top .info{
+    padding-top: 3px;
+}
+.main {
+    height: 80px;
+    background: #f5f5f5;
+}
+
+.main .container .logo{
+    width: 15%;
+    height: 100%;
+}
+.main .container .logo img{
+    width: 70%;
+    margin-top: 5%;
+}
+.main .container .search-box{
+    width: 45%;
+    height: 100%;
+    position: relative;
+    
+}
+.main .container .search-box .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 90%;
+    height: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px  rgb(0 0 0 / 20%);
+}
+.main .container .search-box .box input{
+    border: none;
+    outline: none;
+    width: 94%;
+    height: 100%;
+    background: transparent;
+    padding-right: 15px;
+    box-sizing: border-box;
+    
+}
+.main .container .search-box .box input::placeholder{
+    color: #999;
+}
+.main .container .search-box .box i{
+    cursor: pointer;
+}
+.main .container .account{
+    width: 27%;
+    position: relative;
+
+}
+.main .container .account .list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 50%;
+    transform: translate(-50% , -50%);
+}
+.main .container .account .list ul li .box{
+    display: flex ;
+}
+.main .container .account .list ul li:last-child{
+    margin-right: 5px;
+}
+.main .container .account .list ul li:last-child .box .text{
+    line-height: 2.5;
+}
+.main .container .account .list ul li:first-child .box .image{
+    animation:loc .5s infinite ;
+}
+@keyframes loc{
+    from{
+        transform : scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+.main .container .cart{
+    width: 13%;
+    height: 100%;
+    position: relative;
+}
+.main .container .cart .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50% , -50%);
+
+}
+.main .container .cart .box a{
+    background:  #ff1744;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 29%;
+    box-sizing: border-box;
+    color: #fff;
+}
+header .bottom{
+    height: 35px;
+    border-bottom: 2px solid green;
+}
+header .bottom ul {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 2.3;
+
+}
+header .bottom ul li {
+    padding: 0 10px;
+    transition: .5s;
+}
+header .bottom ul li:hover{
+    background: #FF1744;
+    border-radius: 15px;
+}
+header .bottom ul li:hover a{
+    color: #fff;
+}
+header .bottom ul li a {
+    color: #999;
+}
+#mobile-header{
+    display: none;
+}
+@media (max-width:992px){
+    #desktop-header{
+        display: none;
+    }
+    #mobile-header {
+        display: block;
+        height: 100px;
+        background: #FF1744;
+    }
+    #mobile-header .wrapper{
+        height: 100%;
+        display: flex;
+    }
+    #mobile-header .wrapper>div{
+        width: 33.3%;
+    }
+    #mobile-header .wrapper .right ul li{
+        width: 50%;
+        line-height: 9; 
+    }
+    #mobile-header .wrapper .right ul li img{
+        width: 56px;
+        height: 56px;
+    }
+    #mobile-header .wrapper .left ul{
+        height: 100%;
+    }
+    #mobile-header .wrapper .left ul li{
+        width: 50%;
+        line-height: 2.6;
+        text-align: left;
+    }
+    #mobile-header .wrapper .left ul li a{
+        color: #fff;
+        font-size: 35px;
+    }
+
+}   
